@@ -29,6 +29,14 @@ public final class TransactionStatistics {
    public static String mostPopularTicker(List<Transaction> transactions) {
       return null;
    }
+   
+   public double sumOfTotalAbsoluteValue(Transaction tr) {
+	   
+	   
+	   
+	   
+	   return 0;
+   }
 
    private TransactionStatistics()  {}
 }
