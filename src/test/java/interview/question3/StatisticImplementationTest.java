@@ -13,14 +13,31 @@ public class StatisticImplementationTest {
 		StatisticImplementation obj = new StatisticImplementation(per);
 		for (int x : input_data) {
 			obj.event(x);
-			System.out.println("New number added is " + x + ", moving mean = " + obj.mean());
+			System.out.println("New number added " + x + ", moving mean = " + obj.mean());
 		}
 
 	}
 
 	@Test
 	public void testMin() {
+		int[] input_data = { 1, 3, 5, 6, 8, 12, 18, 21, 22, 25 };
+		int per = 3;
+		StatisticImplementation obj = new StatisticImplementation(per);
+		for (int x : input_data) {
+			obj.event(x);
+			System.out.println("New number added " + x + ", min value = " + obj.minimum());
+		}
+	}
 
+	@Test
+	public void testMax() {
+		int[] input_data = { 1, 3, 5, 6, 8, 12, 18, 21, 22, 25 };
+		int per = 3;
+		StatisticImplementation obj = new StatisticImplementation(per);
+		for (int x : input_data) {
+			obj.event(x);
+			System.out.println("New number added " + x + ", max value = " + obj.maximum());
+		}
 	}
 
 }

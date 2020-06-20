@@ -29,22 +29,27 @@ public class StatisticImplementation implements Statistic {
 		if (dataSet.isEmpty()) {
 			return 0.0f;
 		}
-		return sum / dataSet.size();
+		float meanFloatVal = sum / (float) dataSet.size();
+		
+		return meanFloatVal;
 	}
 
 	@Override
 	public synchronized int minimum() {
-
+		if (dataSet.isEmpty()) {
+			return 0;
+		}
 		return Collections.min(dataSet);
 	}
 
 	@Override
 	public synchronized int maximum() {
 
+		if (dataSet.isEmpty()) {
+			return 0;
+		}
+
 		return Collections.max(dataSet);
 	}
-
-	
-	
 
 }
