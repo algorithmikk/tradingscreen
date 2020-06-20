@@ -9,6 +9,22 @@ public class StatisticImplementation implements Statistic {
 	private final Queue<Integer> dataSet = new ArrayDeque<>();
 	private final int period;
 	private int sum;
+	
+	public int getSum() {
+		return sum;
+	}
+
+	public void setSum(int sum) {
+		this.sum = sum;
+	}
+
+	public Queue<Integer> getDataSet() {
+		return dataSet;
+	}
+
+	public int getPeriod() {
+		return period;
+	}
 
 	public StatisticImplementation(int period) {
 		this.period = period;
@@ -29,7 +45,7 @@ public class StatisticImplementation implements Statistic {
 		if (dataSet.isEmpty()) {
 			return 0.0f;
 		}
-		float meanFloatVal = sum / (float) dataSet.size();
+		float meanFloatVal = sum / (float) period;
 		
 		return meanFloatVal;
 	}
