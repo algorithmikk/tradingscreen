@@ -1,4 +1,4 @@
-# tradingscreen
+# tickers data ms assignment description
 
 
 
