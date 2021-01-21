@@ -1,6 +1,4 @@
-/*
- * Copyright (c) 2006-2019 Henri Tremblay.
- */
+
 package interview.questions.question3;
 
 /**
